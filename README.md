@@ -2,9 +2,11 @@
 
 You can start to build your app in a fingersnap.
 
+
 ## Installation
 
 `$ hoodie new appName -t "zoepage/hoodie-boilerplate" `
+
 
 ## Including
 
@@ -13,7 +15,7 @@ You can start to build your app in a fingersnap.
 
 index.html
 + hoodie-accountbar (SignIn / SignOut)
-+ including all files you need
++ including all (css + js) files you need
 
 main.css (OO-CSS structure)
 + layout.css 
