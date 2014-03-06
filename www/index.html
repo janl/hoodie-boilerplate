@@ -4,11 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{hoodie_appname}}</title>
+
+    <meta name="author" content="">
     <meta name="description" content="">
+    <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/prism/prism.css">
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
   <body>
@@ -18,7 +20,7 @@
         <p>
           hoodie playground.
         </p>
-
+<!-- START hoodie-accountbar -->
         <div class="hoodie-accountbar">
 
           <div class="hoodie-account-signedout">
@@ -64,63 +66,28 @@
               </ul>
             </span>
           </div><!-- /.hoodie-account-error -->
-        </div><!--/hoodieAccountBar -->
+        </div>
+<!-- END hoodie-accountbar -->
       </div>
 
       <div class="content">
-        <ul id="todolist"></ul>
-
-        <input type="text" id="todoinput"  placeholder="new todo ↵" />
+          <h2>Hello!</h2>
+          <p>I'm your content and that's the way I like it!</p>
       </div>
 
-      <div class="code">
-<pre class="language-javascript"><code class="language-javascript">
-// initialize Hoodie
-var hoodie  = new Hoodie()
-
-// initial load of all todo items from the store
-hoodie.store.findAll('todo').then( function(todos) {
-  todos.sort( sortByCreatedAt ).forEach( addTodo )
-})
-
-// when a new todo gets stored, add it to the UI
-hoodie.store.on('add:todo', addTodo)
-// when a user signs out, clear the todo list
-hoodie.account.on('signout', clearTodos)
-
-// handle creating a new task
-$('#todoinput').on('keypress', function(event) {
-  if (event.keyCode == 13) { // ENTER
-    hoodie.store.add('todo', {title: event.target.value});
-    event.target.value = '';
-  }
-})
-
-function addTodo( todo ) {
-  $('#todolist').append('&lt;li&gt;'+todo.title+'&lt;/li&gt;');
-}
-function clearTodos() {
-  $('#todolist').html('');
-}
-function sortByCreatedAt(a, b) {
-  return a.createdAt &gt; b.createdAt
-}
-</code></pre>
-      </div><!-- /.code -->
-
       <footer class="copy">
-        <p>&hearts; hood.ie 2013</p>
+        <p>&hearts; hood.ie 2014</p>
       </footer>
     </div> <!-- /.container -->
 
     <script src="assets/vendor/jquery-1.9.1.js"></script>
     <script src="assets/vendor/bootstrap/bootstrap.js"></script>
-    <script src="assets/vendor/prism/prism.js"></script>
+
     <!-- Load the dynamic version of hoodie.js that includes all the plugin code-->
     <script src="/_api/_files/hoodie.js"></script>
 
     <script src="assets/vendor/hoodie.accountbar.bootstrap.js"></script>
-    <script src="assets/vendor/bootstrap.modalform.js"></script>
+<!--    <script src="assets/vendor/bootstrap.modalform.js"></script> -->
     <script src="assets/js/main.js"></script>
   </body
 </html>

@@ -1,0 +1,30 @@
+/* ==========================================================================
+   basic layout
+   ========================================================================== */
+
+
+.container {
+  position: relative;
+  background: #fff;
+  margin-top: -10px;
+}
+
+	.hoodie-accountbar {
+	  position: absolute;
+	  top: 20px;
+	  right: 10px;
+	}
+
+
+	.content {
+		padding-bottom: 25px;
+	}
+
+	.copy {
+		background-color:  #f1f1f1;
+	}
+
+		.copy p {
+		  padding: 10px 0;
+		  text-align: center;
+		}
